@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Quorum: A New Kind of Forum (draft)</title>
+		<meta name="author" content="Thomas Boyt" />
+
+		<link href="rss.xml" rel="alternate" title="thomas boyt's blog" type="application/rss+xml" /> 
+		
+		<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	</head>
+
+	<body>
+
+		<div class="site">
+			<div class="title">
+				<a href="/">Thomas Boyt</a>
+				<a class="extra" href="blog.html">blog</a>
+				<a class="extra" href="http://twitter.com/thomasApps">twitter</a>
+				<a class="extra" href="https://github.com/thomasboyt/">github</a>
+				<a class="extra" href="http://www.quora.com/Thomas-Boyt">quora</a>
+			</div>
+		  
+			<div id="post">
+<h1>Quorum: A New Kind of Forum (draft)</h1>
+<p>Once upon a time, forums were the go-to solution to building a general-purpose discussion community. Whether you needed to create a tech support area for customers of a product, a place to communicate directly with fans of a webcomic, or a discussion site for your Quake 3 clan, the easiest solution was a forum package such as phpBB or vBulletin.</p>
+
+<p>Times have changed, though. Nowadays, it&#8217;s just as easy to create a Facebook fan page for your announcements, a Twitter account for communication with fans, and handle your support through any number of question and answer services. In this brave new Web 2.0 world of ours, the classic web forum has lost much of its luster.</p>
+
+<p>But here&#8217;s the big secret: <em>everything from Reddit to Quora is just an evolution of the forum.</em> Of course, they don&#8217;t have the same layout forums have had since the days of UBB and Perl scripts. They&#8217;re not set into a gridded index subforums, with the threads listed in descending order of most recent post. Instead, they both try to bring interesting content directly to you - Quora lets you follow individual topics (subforums) and questions (threads), while Reddit lets you follow subreddits and alerts you to new posts in comment threads. Really, these are just traditional forums, but organized differently.</p>
+
+<p>So why are they different? The truth is <em>traditional web forums are outdated.</em> They don&#8217;t expand easily, being defined into rigid subforums. Threads easily get lost in the fray, questions go unanswered, and huge, hard-to-follow threads can build up when a topic is just too big for one thread, but doesn&#8217;t have a subforum. It&#8217;s hard to find the most interesting and relevant content in traditional forums.</p>
+
+<p>So, let&#8217;s create a new kind of forum software for the modern era. Specifically, one that builds on concepts from sites like Quora (hence the name), Reddit, and more.</p>
+
+<h1 id='the_basics'>The Basics</h1>
+
+<p>There are three major uses for forums:</p>
+
+<ul>
+<li>Question and answer (Quora)</li>
+
+<li>General discussion (Reddit)</li>
+
+<li>Knowledge base (Ubuntu Forums)</li>
+</ul>
+
+<p><em>Most forums are a mix of all three</em>, but in forum software like phpBB and vBulletin, you end up with weird compromises. For example, look at two of the most popular forums on the internet, NeoGAF and Something Awful (both running vB), specifically their gaming sections.</p>
+
+<p>Lots and lots of games come out each year, and these forums try to combine the above three uses. Generally, games have their own <em>megathreads</em>, large threads that keep the forum from being too fragmented into different threads discussing the same game. On these forums, threads generally are structured to have an original post (OP), or the first post in the thread, that has tons of information about the game, such as release dates, screen shots, and later, questions that have come up often in the thread.</p>
+
+<p>Megathreads are pretty annoying! With 27 discussions going on at once, and popping in and out, posts and topics of discussion can easily be lost in the thread, and not generate the amount of discussion they deserve. Of course, on new, non-traditional forums such as Reddit, people have more options regarding how they discuss these topics. Reddit has subreddits, which are essentially user-creatable, scalable subforums. For example, StarCraft 2 and Team Fortress 2 have huge subreddits, both ending up being some of the top news and discussion sources for each game.</p>
+
+<p>This is one solution. But then again, look at how Quora does it. Quora lets any user create new tags for questions. Each tag can represent a subforum, but also in some ways, a megathread. Tags can have an information entry associated with them (like the OP of a megathread) that can be edited by all. By creating new questions under that tag, you&#8217;re essentially populating a subforum with new threads.</p>
+
+<h1 id='goals'>Goals</h1>
+
+<ul>
+<li>
+<p>Be flexible. A good forum is multi-purpose. Quorum needs to be usable for the three major uses of forums:</p>
+
+<ul>
+<li>Question and answer (Quora)</li>
+
+<li>General discussion (most of Reddit)</li>
+
+<li>Knowledge Base (Ubuntu Forums)</li>
+</ul>
+</li>
+
+<li>
+<p>Allow users to create topics, but keep focused on the site&#8217;s niche</p>
+</li>
+
+<li>
+<p>Deliver the best, most relevant content to each user, while leaving open the option to browse a forum in full for interesting items.</p>
+</li>
+
+<li>
+<p>Reward users for contributing good content</p>
+</li>
+
+<li>
+<p>Organize content in a sensible, easy-to-understand way</p>
+</li>
+</ul>
+
+<h1 id='topics'>Topics</h1>
+
+<p>Topics make it easy to find threads that interest you. Topics essentially work like tags on other sites, but should only be used to define the topics a thread involves - they shouldn&#8217;t be used, for example, to mark a thread as &#8220;funny&#8221; or &#8220;one of Joe&#8217;s favorite threads.&#8221;&#8221;</p>
+
+<p>Users are encouraged to make topics that don&#8217;t exist, as long as they&#8217;re not duplicates of existing ones or irrelevant to the forum&#8217;s focus.</p>
+
+<ul>
+<li>A video game (<em>Bulletstorm</em>)</li>
+
+<li>A news event (March 2011 Japanese Earthquake)</li>
+
+<li>A person (Lady Gaga)</li>
+
+<li>A genre of music, movies, games, books&#8230; (sci-fi)</li>
+
+<li>A general type of thing (video game) Just like Quora, each topic page that has a description editable by all (for example a page on <em>Bulletstorm</em> could list things like release dates, FAQs, etc.) that doubles as a subforum view.</li>
+</ul>
+
+<p>Users are encouraged to tag their threads with as many topics as are relevant. Doing this helps users find the content they want. For example, a user could follow &#8220;PlayStation 3 games&#8221; or &#8220;First-Person Shooters&#8221; instead of &#8220;Video games&#8221; if they have specific interests. On the other hand, if they like video games, but don&#8217;t care about sports games, they could follow &#8220;Video games&#8221; and filter out &#8220;Sports games.&#8221;</p>
+
+<p>Moderators have more advanced powers when it comes to topics. They can <em>star</em> topics, which marks them as essentially broad, key topics. To enforce discussion relevant to the scope of a forum, a forum can be configured to require posts have at least one of these &#8220;starred&#8221; topics, such as &#8220;Video games&#8221; or &#8220;Sports,&#8221; attached to it.</p>
+
+<h1 id='threads'>Threads</h1>
+
+<p>Threads are pretty simple. A thread is just a linear list of posts related to the topic.</p>
+
+<p>Threads are actually <em>not</em> threaded - really, they should have a different name. They&#8217;re linearly organized by time, like most forums (phpbb, vB) This might seem sort of crazy in a world used to Reddit comments and other similar sites, but it&#8217;s for a few reasons-</p>
+
+<ul>
+<li>Keeps threads from spiraling out into megathreads - if you&#8217;re really having such a complex discussion that you need it to be threaded, you should probably make a new one</li>
+
+<li>Easier to follow a whole thread&#8217;s discussion over <em>time</em></li>
+</ul>
+
+<h1 id='personal_thread_listfollowing'>Personal Thread List/Following</h1>
+
+<p>You can follow <em>topics, threads, and users</em>. Your personal home page can display new threads in followed topics, new posts in followed threads, and new threads and posts by followed users.</p>
+
+<p>Users have two ways of finding threads - their feed and tag views.</p>
+
+<p>The feed is similar to Quora&#8217;s and other social networking sites. It gives a reverse-chronological-order list of activity in topics and threads and by users.</p>
+
+<h1 id='moderation_and_administration'>Moderation and Administration</h1>
+
+<p>One thing I haven&#8217;t covered much is keeping the site on track. When you have a site that&#8217;s as free-form as the one I just described, where users can make all the topics and threads they want, it might seem hard to corral a forum.</p>
+
+<p>As I said above, a forum can be configured to require threads to have at least one broad topic approved by moderators. This at least alerts users that they need to have a post relevant to the board.</p>
+
+<p>Quorum</p>
+
+<h1 id='misc'>Misc</h1>
+
+<ul>
+<li>BBCode is outdated! It&#8217;s really annoying to use most of the time, and has been superseded by new markup languages and WYSIWYG editors. The new post and topic editor has two options: WYSIWYG and Markdown. Both can be customized to suit the needs of the forum. By default, the topic editor has more advanced features than the post editor, adding headings and colors.</li>
+
+<li>The forum automatically resizes images to fit within the width of the page. Clicking on larger images that are not within links will open the full-sized image in a new tab.</li>
+</ul>
+</div>
+		  
+			<div class="footer">
+				<div class="contact">
+					<p>
+						Thomas Boyt<br />
+						Developer<br />
+						thomas@mream.net
+					</p>
+				</div>
+				<div class="about-jekyll">
+					<p>
+						This site runs <a href="http://jekyllrb.com/">Jekyll</a> <br />
+						and a modified version of <br />
+						<a href="https://github.com/mojombo/mojombo.github.com">Tom Preston-Warner's theme.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

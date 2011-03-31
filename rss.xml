@@ -1,0 +1,31 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<!-- thanks Dave Coyled for the template
+     http://coyled.com/2010/07/05/jekyll-templates-for-atom-rss/ -->
+
+  <channel>
+    <title>thomasboyt.github.com</title>
+    <link>http://thomasboyt.github.com</link>
+    <atom:link href="http://thomasboyt.github.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>thomas boyt's blog</description>
+    <language>en-us</language>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
+
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://thomasboyt.github.com{{ post.url }}</link>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+      <author>thomas@mream.net (Thomas Boyt)</author>
+      <guid>http://thomasboyt.github.com{{ post.id }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+
+  </channel> 
+</rss>
