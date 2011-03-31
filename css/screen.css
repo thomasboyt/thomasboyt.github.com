@@ -11,8 +11,9 @@
 	padding: 0;
 }
 
-html, body {
-	height: 100%;
+html {
+	overflow: -moz-scrollbars-vertical; 
+	overflow-y: scroll;
 }
 
 body {
@@ -205,3 +206,18 @@ ul.posts {
 	#related h2 {
 		margin-bottom: 1em;
 	}
+
+#twitter_link_expand {
+	display:none;
+}
+
+#twitter_link_expand {
+	color:#555;
+}
+
+#twitter_link_expand a, #twitter_link_expand a:visited {
+	color:#aaa;
+}
+#twitter_link_expand a:hover {
+	color:black;
+}

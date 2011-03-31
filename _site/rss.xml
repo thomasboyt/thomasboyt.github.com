@@ -10,8 +10,8 @@
     <atom:link href="http://thomasboyt.github.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>thomas boyt's blog</description>
     <language>en-us</language>
-    <pubDate>Wed, 30 Mar 2011 23:43:43 Eastern Daylight Time</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2011 23:43:43 Eastern Daylight Time</lastBuildDate>
+    <pubDate>Thu, 31 Mar 2011 00:53:08 Eastern Daylight Time</pubDate>
+    <lastBuildDate>Thu, 31 Mar 2011 00:53:08 Eastern Daylight Time</lastBuildDate>
 
     
     <item>
@@ -29,26 +29,6 @@
 &lt;p&gt;So why are they different? The truth is &lt;em&gt;traditional web forums are outdated.&lt;/em&gt; They don&amp;#8217;t expand easily, being defined into rigid subforums. Threads easily get lost in the fray, questions go unanswered, and huge, hard-to-follow threads can build up when a topic is just too big for one thread, but doesn&amp;#8217;t have a subforum. It&amp;#8217;s hard to find the most interesting and relevant content in traditional forums.&lt;/p&gt;
 
 &lt;p&gt;So, let&amp;#8217;s create a new kind of forum software for the modern era. Specifically, one that builds on concepts from sites like Quora (hence the name), Reddit, and more.&lt;/p&gt;
-
-&lt;h1 id='the_basics'&gt;The Basics&lt;/h1&gt;
-
-&lt;p&gt;There are three major uses for forums:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Question and answer (Quora)&lt;/li&gt;
-
-&lt;li&gt;General discussion (Reddit)&lt;/li&gt;
-
-&lt;li&gt;Knowledge base (Ubuntu Forums)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Most forums are a mix of all three&lt;/em&gt;, but in forum software like phpBB and vBulletin, you end up with weird compromises. For example, look at two of the most popular forums on the internet, NeoGAF and Something Awful (both running vB), specifically their gaming sections.&lt;/p&gt;
-
-&lt;p&gt;Lots and lots of games come out each year, and these forums try to combine the above three uses. Generally, games have their own &lt;em&gt;megathreads&lt;/em&gt;, large threads that keep the forum from being too fragmented into different threads discussing the same game. On these forums, threads generally are structured to have an original post (OP), or the first post in the thread, that has tons of information about the game, such as release dates, screen shots, and later, questions that have come up often in the thread.&lt;/p&gt;
-
-&lt;p&gt;Megathreads are pretty annoying! With 27 discussions going on at once, and popping in and out, posts and topics of discussion can easily be lost in the thread, and not generate the amount of discussion they deserve. Of course, on new, non-traditional forums such as Reddit, people have more options regarding how they discuss these topics. Reddit has subreddits, which are essentially user-creatable, scalable subforums. For example, StarCraft 2 and Team Fortress 2 have huge subreddits, both ending up being some of the top news and discussion sources for each game.&lt;/p&gt;
-
-&lt;p&gt;This is one solution. But then again, look at how Quora does it. Quora lets any user create new tags for questions. Each tag can represent a subforum, but also in some ways, a megathread. Tags can have an information entry associated with them (like the OP of a megathread) that can be edited by all. By creating new questions under that tag, you&amp;#8217;re essentially populating a subforum with new threads.&lt;/p&gt;
 
 &lt;h1 id='goals'&gt;Goals&lt;/h1&gt;
 
@@ -79,6 +59,10 @@
 
 &lt;li&gt;
 &lt;p&gt;Organize content in a sensible, easy-to-understand way&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Tie into existing social networks&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -113,24 +97,12 @@
 &lt;ul&gt;
 &lt;li&gt;Keeps threads from spiraling out into megathreads - if you&amp;#8217;re really having such a complex discussion that you need it to be threaded, you should probably make a new one&lt;/li&gt;
 
-&lt;li&gt;Easier to follow a whole thread&amp;#8217;s discussion over &lt;em&gt;time&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;A chronological order makes it easy to follow a thread over time.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id='personal_thread_listfollowing'&gt;Personal Thread List/Following&lt;/h1&gt;
+&lt;p&gt;Threads can be followed and show up in your feed, just like topics.&lt;/p&gt;
 
-&lt;p&gt;You can follow &lt;em&gt;topics, threads, and users&lt;/em&gt;. Your personal home page can display new threads in followed topics, new posts in followed threads, and new threads and posts by followed users.&lt;/p&gt;
-
-&lt;p&gt;Users have two ways of finding threads - their feed and tag views.&lt;/p&gt;
-
-&lt;p&gt;The feed is similar to Quora&amp;#8217;s and other social networking sites. It gives a reverse-chronological-order list of activity in topics and threads and by users.&lt;/p&gt;
-
-&lt;h1 id='moderation_and_administration'&gt;Moderation and Administration&lt;/h1&gt;
-
-&lt;p&gt;One thing I haven&amp;#8217;t covered much is keeping the site on track. When you have a site that&amp;#8217;s as free-form as the one I just described, where users can make all the topics and threads they want, it might seem hard to corral a forum.&lt;/p&gt;
-
-&lt;p&gt;As I said above, a forum can be configured to require threads to have at least one broad topic approved by moderators. This at least alerts users that they need to have a post relevant to the board.&lt;/p&gt;
-
-&lt;p&gt;Quorum&lt;/p&gt;
+&lt;h1 id='the_feed_and_the_thread_list'&gt;The Feed and the Thread List&lt;/h1&gt;
 
 &lt;h1 id='misc'&gt;Misc&lt;/h1&gt;
 

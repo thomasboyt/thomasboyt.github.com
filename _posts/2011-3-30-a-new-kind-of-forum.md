@@ -13,21 +13,6 @@ So why are they different? The truth is _traditional web forums are outdated._ T
 
 So, let's create a new kind of forum software for the modern era. Specifically, one that builds on concepts from sites like Quora (hence the name), Reddit, and more.
 
-# The Basics
-
-There are three major uses for forums:
-* Question and answer (Quora)
-* General discussion (Reddit)
-* Knowledge base (Ubuntu Forums)
-
-_Most forums are a mix of all three_, but in forum software like phpBB and vBulletin, you end up with weird compromises. For example, look at two of the most popular forums on the internet, NeoGAF and Something Awful (both running vB), specifically their gaming sections.
-
-Lots and lots of games come out each year, and these forums try to combine the above three uses. Generally, games have their own *megathreads*, large threads that keep the forum from being too fragmented into different threads discussing the same game. On these forums, threads generally are structured to have an original post (OP), or the first post in the thread, that has tons of information about the game, such as release dates, screen shots, and later, questions that have come up often in the thread.
-
-Megathreads are pretty annoying! With 27 discussions going on at once, and popping in and out, posts and topics of discussion can easily be lost in the thread, and not generate the amount of discussion they deserve. Of course, on new, non-traditional forums such as Reddit, people have more options regarding how they discuss these topics. Reddit has subreddits, which are essentially user-creatable, scalable subforums. For example, StarCraft 2 and Team Fortress 2 have huge subreddits, both ending up being some of the top news and discussion sources for each game.
-
-This is one solution. But then again, look at how Quora does it. Quora lets any user create new tags for questions. Each tag can represent a subforum, but also in some ways, a megathread. Tags can have an information entry associated with them (like the OP of a megathread) that can be edited by all. By creating new questions under that tag, you're essentially populating a subforum with new threads.
-
 # Goals
 
 * Be flexible. A good forum is multi-purpose. Quorum needs to be usable for the three major uses of forums:
@@ -38,6 +23,7 @@ This is one solution. But then again, look at how Quora does it. Quora lets any 
 * Deliver the best, most relevant content to each user, while leaving open the option to browse a forum in full for interesting items.
 * Reward users for contributing good content
 * Organize content in a sensible, easy-to-understand way
+* Tie into existing social networks
 
 # Topics
 
@@ -61,23 +47,13 @@ Threads are pretty simple. A thread is just a linear list of posts related to th
 
 Threads are actually *not* threaded - really, they should have a different name. They're linearly organized by time, like most forums (phpbb, vB) This might seem sort of crazy in a world used to Reddit comments and other similar sites, but it's for a few reasons-
 * Keeps threads from spiraling out into megathreads - if you're really having such a complex discussion that you need it to be threaded, you should probably make a new one
-* Easier to follow a whole thread's discussion over _time_
+* A chronological order makes it easy to follow a thread over time.
 
-# Personal Thread List/Following
+Threads can be followed and show up in your feed, just like topics.
 
-You can follow _topics, threads, and users_. Your personal home page can display new threads in followed topics, new posts in followed threads, and new threads and posts by followed users.
+# The Feed and the Thread List
 
-Users have two ways of finding threads - their feed and tag views.
 
-The feed is similar to Quora's and other social networking sites. It gives a reverse-chronological-order list of activity in topics and threads and by users. 
-
-# Moderation and Administration
-
-One thing I haven't covered much is keeping the site on track. When you have a site that's as free-form as the one I just described, where users can make all the topics and threads they want, it might seem hard to corral a forum.
-
-As I said above, a forum can be configured to require threads to have at least one broad topic approved by moderators. This at least alerts users that they need to have a post relevant to the board.
-
-Quorum
 
 # Misc
 * BBCode is outdated! It's really annoying to use most of the time, and has been superseded by new markup languages and WYSIWYG editors. The new post and topic editor has two options: WYSIWYG and Markdown. Both can be customized to suit the needs of the forum. By default, the topic editor has more advanced features than the post editor, adding headings and colors.

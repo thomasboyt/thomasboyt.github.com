@@ -7,10 +7,12 @@
 		<title>Quorum: A New Kind of Forum (draft)</title>
 		<meta name="author" content="Thomas Boyt" />
 
-		<link href="rss.xml" rel="alternate" title="thomas boyt's blog" type="application/rss+xml" /> 
+		<link href="rss.xml" rel="alternate" title="Thomas Boyt's Blog" type="application/rss+xml" /> 
 		
 		<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
 		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+		<script src="javascript/jquery-1.5.1.min.js" type="text/javascript"></script>
 	</head>
 
 	<body>
@@ -19,7 +21,10 @@
 			<div class="title">
 				<a href="/">Thomas Boyt</a>
 				<a class="extra" href="blog.html">blog</a>
-				<a class="extra" href="http://twitter.com/thomasApps">twitter</a>
+				<a class="extra" id="twitter_link" href="#">twitter</a>
+				<span id="twitter_link_expand"> 
+					(<a href="http://twitter.com/thomasaboyt">personal</a> / <a href="http://twitter.com/thomasApps">app news</a>)
+				</span>
 				<a class="extra" href="https://github.com/thomasboyt/">github</a>
 				<a class="extra" href="http://www.quora.com/Thomas-Boyt">quora</a>
 			</div>
@@ -35,26 +40,6 @@
 <p>So why are they different? The truth is <em>traditional web forums are outdated.</em> They don&#8217;t expand easily, being defined into rigid subforums. Threads easily get lost in the fray, questions go unanswered, and huge, hard-to-follow threads can build up when a topic is just too big for one thread, but doesn&#8217;t have a subforum. It&#8217;s hard to find the most interesting and relevant content in traditional forums.</p>
 
 <p>So, let&#8217;s create a new kind of forum software for the modern era. Specifically, one that builds on concepts from sites like Quora (hence the name), Reddit, and more.</p>
-
-<h1 id='the_basics'>The Basics</h1>
-
-<p>There are three major uses for forums:</p>
-
-<ul>
-<li>Question and answer (Quora)</li>
-
-<li>General discussion (Reddit)</li>
-
-<li>Knowledge base (Ubuntu Forums)</li>
-</ul>
-
-<p><em>Most forums are a mix of all three</em>, but in forum software like phpBB and vBulletin, you end up with weird compromises. For example, look at two of the most popular forums on the internet, NeoGAF and Something Awful (both running vB), specifically their gaming sections.</p>
-
-<p>Lots and lots of games come out each year, and these forums try to combine the above three uses. Generally, games have their own <em>megathreads</em>, large threads that keep the forum from being too fragmented into different threads discussing the same game. On these forums, threads generally are structured to have an original post (OP), or the first post in the thread, that has tons of information about the game, such as release dates, screen shots, and later, questions that have come up often in the thread.</p>
-
-<p>Megathreads are pretty annoying! With 27 discussions going on at once, and popping in and out, posts and topics of discussion can easily be lost in the thread, and not generate the amount of discussion they deserve. Of course, on new, non-traditional forums such as Reddit, people have more options regarding how they discuss these topics. Reddit has subreddits, which are essentially user-creatable, scalable subforums. For example, StarCraft 2 and Team Fortress 2 have huge subreddits, both ending up being some of the top news and discussion sources for each game.</p>
-
-<p>This is one solution. But then again, look at how Quora does it. Quora lets any user create new tags for questions. Each tag can represent a subforum, but also in some ways, a megathread. Tags can have an information entry associated with them (like the OP of a megathread) that can be edited by all. By creating new questions under that tag, you&#8217;re essentially populating a subforum with new threads.</p>
 
 <h1 id='goals'>Goals</h1>
 
@@ -85,6 +70,10 @@
 
 <li>
 <p>Organize content in a sensible, easy-to-understand way</p>
+</li>
+
+<li>
+<p>Tie into existing social networks</p>
 </li>
 </ul>
 
@@ -119,24 +108,12 @@
 <ul>
 <li>Keeps threads from spiraling out into megathreads - if you&#8217;re really having such a complex discussion that you need it to be threaded, you should probably make a new one</li>
 
-<li>Easier to follow a whole thread&#8217;s discussion over <em>time</em></li>
+<li>A chronological order makes it easy to follow a thread over time.</li>
 </ul>
 
-<h1 id='personal_thread_listfollowing'>Personal Thread List/Following</h1>
+<p>Threads can be followed and show up in your feed, just like topics.</p>
 
-<p>You can follow <em>topics, threads, and users</em>. Your personal home page can display new threads in followed topics, new posts in followed threads, and new threads and posts by followed users.</p>
-
-<p>Users have two ways of finding threads - their feed and tag views.</p>
-
-<p>The feed is similar to Quora&#8217;s and other social networking sites. It gives a reverse-chronological-order list of activity in topics and threads and by users.</p>
-
-<h1 id='moderation_and_administration'>Moderation and Administration</h1>
-
-<p>One thing I haven&#8217;t covered much is keeping the site on track. When you have a site that&#8217;s as free-form as the one I just described, where users can make all the topics and threads they want, it might seem hard to corral a forum.</p>
-
-<p>As I said above, a forum can be configured to require threads to have at least one broad topic approved by moderators. This at least alerts users that they need to have a post relevant to the board.</p>
-
-<p>Quorum</p>
+<h1 id='the_feed_and_the_thread_list'>The Feed and the Thread List</h1>
 
 <h1 id='misc'>Misc</h1>
 
@@ -164,6 +141,8 @@
 				</div>
 			</div>
 		</div>
+
+		<script src="javascript/script.js" type="text/javascript"></script>
 
 	</body>
 </html>
