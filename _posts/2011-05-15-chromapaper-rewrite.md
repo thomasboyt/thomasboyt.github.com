@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coffeepaper: Rewriting Chromapaper"
+title: "Rewriting Chromapaper"
 ---
 
 Last Decemember, I got a CR-48 in the mail from Google. This was my first laptop ever, and I was excited by the prospects of mobile computing that everyone else has experienced: working and reading at school, on the bus, wherever.
