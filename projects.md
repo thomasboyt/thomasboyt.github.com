@@ -10,4 +10,4 @@ permalink: projects.html
 
 **[Timely Alarm Clock](http://timely-alarm.heroku.com)** ([GitHub](https://github.com/thomasboyt/Timely)) - A podcast alarm clock. Runs on Sinatra, HAML, SASS, and JavaScript, and a lot of jQuery plugins.
 
-**More** projects in various stages of incompleteness can be found at [my GitHub page](http://github.com/thomasboyt).
+*More projects in various stages of incompleteness can be found at [my GitHub page](http://github.com/thomasboyt).*
