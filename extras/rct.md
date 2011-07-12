@@ -1,7 +1,7 @@
 ---
 layout: blank
 title: "Installing RCT on Mac"
-permalink: rct.md
+permalink: rct.html
 ---
 
 # Installing GoG's version of Roller Coaster Tycoon Deluxe on Mac OS with Wine
@@ -16,59 +16,59 @@ Wineskin is a wrapper around WINE, a great emulator (technically compatibility l
 
 When you run Wineskin for the first time, hit "Update" under "wrapper version" to install the newest version of the wrapper. It should look something like this after:
 
-!(http://i.imgur.com/w4gpU.png)
+![](http://i.imgur.com/w4gpU.png)
 
 Click the "+" icon under "Installed engines".
 
-!(http://i.imgur.com/5NWed.png)
+![](http://i.imgur.com/5NWed.png)
 
 Select whatever the topmost option is under "available engines", then click "Download and Install".
 
-!(http://i.imgur.com/3pIg4.png)
+![](http://i.imgur.com/3pIg4.png)
 
 Click OK and wait for the install to finish.
 
 ### Creating the wrapper
 
-!(http://i.imgur.com/uVc95.png)
+![](http://i.imgur.com/uVc95.png)
 
 Click "Create New Blank Wrapper". Name the wrapper whatever you want ("RCT", for example).
 
-!(http://i.imgur.com/Fado8.png)
+![](http://i.imgur.com/Fado8.png)
 
 When this comes up, click "Cancel". You don't need it for anything in RCT.
 
-!(http://i.imgur.com/f553E.png)
+![](http://i.imgur.com/f553E.png)
 
 Click "View wrapper in Finder". Open the new RCT application.
 
 ### Installing RCT
 
-!(http://i.imgur.com/vyXgA.png)
+![](http://i.imgur.com/vyXgA.png)
 
 Click "Install Windows software" and locate the RCT install file you downloaded from GoG.
 
-!(http://i.imgur.com/3DGVN.png)
+![](http://i.imgur.com/3DGVN.png)
 
 Here, select "Options" before beginning the install.
 
-!(http://i.imgur.com/JZxde.png)
+![](http://i.imgur.com/JZxde.png)
 
 Uncheck Foxit (a Windows PDF reader) and desktop/start menu icons (which Wine will try to make for you, but they won't work). Then start the install.
 
-!(http://i.imgur.com/OQBPq.png)
+![](http://i.imgur.com/OQBPq.png)
 
 Once it's done, click "Exit Installer".
 
-!(http://i.imgur.com/t1GK0.png)
+![](http://i.imgur.com/t1GK0.png)
 
 Hit OK, but we're about to change this in a second.
 
-!(http://i.imgur.com/vyXgA.png)
+![](http://i.imgur.com/vyXgA.png)
 
 Click "Advanced".
 
-!(http://i.imgur.com/qQ967.png)
+![](http://i.imgur.com/qQ967.png)
 
 Click "Browse" and navigate to "Program Files\GOGcom\RollerCoaster Tycoon Deluxe\" and select "RCT.exe", then click "Done" and "Quit".
 
