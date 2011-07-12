@@ -1,7 +1,7 @@
 ---
 layout: blank
 title: "Installing RCT on Mac"
-permalink: rctmac
+permalink: rctmac.html
 ---
 
 # Installing GoG's version of Roller Coaster Tycoon Deluxe on Mac OS with Wine
