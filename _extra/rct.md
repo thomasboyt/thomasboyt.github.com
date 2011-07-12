@@ -1,3 +1,9 @@
+---
+layout: blank
+title: "Installing RCT on Mac"
+permalink: rct.md
+---
+
 # Installing GoG's version of Roller Coaster Tycoon Deluxe on Mac OS with Wine
 
 Before doing all this, make sure you've downloaded the game from GoG.
