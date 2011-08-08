@@ -5,7 +5,7 @@ title: AJAX Request Manager for JQuery
 
 When writing Chromapaper, one of the biggest mistakes I made was not knowing how to properly manage lots of asynchronous XHTTP requests. Chromapaper used XHTTP requests to "scrape" both Instapaper's list of articles and the article pages themselves. However, I couldn't come up with a good, clean pattern for handling lots of asynchronous requests at once. What I wanted to be able to do was just say "for each article, download, then finish syncing". If you use a synchronous request, it is basically that simple, but it totally locks up the tab (or browser, if it lacks tab sandboxing) while it completes the requests.
 
-I designed a library - I suppose that's what you'd call it, at least - that makes it easy to handle lots of multiple asynchronous XHTTP requests. The key is that, instead of just having a callback for a single request's completion, like a normal request, it also has a callback for when every single request is complete. I used this library for an extension I designed for Chrome, [Something Awful Archiving Tool][1], which takes multi-page Something Awful forums threads and builds a single, easy-to-save-or-print page out of it. This extension has a request for each page for up to hundreds of pages, but doesn't build the page until they are all completed.
+I designed a library - I suppose that's what you'd call it, at least; it's only 45 lines (~1KB) of JavaScript - that makes it easy to handle lots of multiple asynchronous XHTTP requests. The key is that, instead of just having a callback for a single request's completion, like a normal request, it also has a callback for when every single request is complete. I used this library for an extension I designed for Chrome, [Something Awful Archiving Tool][1], which takes multi-page [Something Awful forums][3] threads and builds a single, easy-to-save-or-print page out of it. This extension has a request for each page for up to hundreds of pages, but doesn't build the page until they are all completed.
 
 The library is dependent on JQuery for the AJAX requests. To use it, include it in a `<script>` tag before the rest of your JS (though after JQuery). Then, initialize a new request manager like this:
 
@@ -23,4 +23,4 @@ You get the library at its GitHub page [here][2].
 
 [1]: https://github.com/thomasboyt/SA-Archiving-Tool
 [2]: https://github.com/thomasboyt/JQuery-AJAX-Requests-Manager
-
+[3]: http://forums.somethingawful.com/
