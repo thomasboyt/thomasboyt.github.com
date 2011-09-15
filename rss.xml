@@ -8,10 +8,10 @@ layout: nil
      http://coyled.com/2010/07/05/jekyll-templates-for-atom-rss/ -->
 
   <channel>
-    <title>thomasboyt.github.com</title>
+    <title>thomasboyt.com</title>
     <link>http://thomasboyt.github.com</link>
-    <atom:link href="http://thomasboyt.github.com/rss.xml" rel="self" type="application/rss+xml" />
-    <description>thomas boyt's blog</description>
+    <atom:link href="http://thomasboyt.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Thomas Boyt's Blog</description>
     <language>en-us</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
@@ -19,10 +19,10 @@ layout: nil
     {% for post in site.posts %}
     <item>
       <title>{{ post.title }}</title>
-      <link>http://thomasboyt.github.com{{ post.url }}</link>
+      <link>http://thomasboyt.com{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
-      <author>thomas@mream.net (Thomas Boyt)</author>
-      <guid>http://thomasboyt.github.com{{ post.id }}</guid>
+      <author>me@thomasboyt.com (Thomas Boyt)</author>
+      <guid>http://thomasboyt.com{{ post.id }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}
