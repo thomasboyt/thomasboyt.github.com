@@ -18,28 +18,29 @@ html {
 
 body {
 	background-color: white;
-	font: 13.34px helvetica, arial, clean, sans-serif;
-	*font-size: small;
-	text-align: center;
+	font-family: helvetica neue, arial, clean, sans-serif;
+	text-align: left;
+	font-size: 62.5%;
+    line-height: 2.4em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
 	font-size: 100%;
-}
+}*/
 
 h1 {
-	margin-bottom: 1em;
-	border-bottom: 1px solid #ccc;
-	font-size:120%;
+	margin-bottom: 12px;
+	line-height:1.2em;
 }
 
 h2 {
 	margin-bottom: 1em;
-	border-bottom: 1px solid #ccc;
 }
 
 p {
-	margin: 1em 0;
+	margin: 0 0 24px 0;
+	text-align: justify;
+	line-height:1.6em;
 }
 
 a, a:visited {
@@ -85,17 +86,19 @@ ul.posts {
 /*****************************************************************************/
 
 .site {
-	font-size: 110%;
-	text-align: justify;
-	width: 40em;
+	font-size: 1.0em;
+	width: 610px;
 	margin: 3em auto 2em auto;
-	line-height: 1.5em;
+	font-size:1.6em;
+	color:#3c3c3c;
 }
 
 .title {
 	color: #a00;
 	font-weight: bold;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 4px solid #EEE;
 }
 
 	.site .title a {
@@ -127,6 +130,11 @@ ul.posts {
 		border-top: 4px solid #eee;
 		margin-top: 2em;
 		overflow: hidden;
+		padding-top:1em;
+	}
+
+	.site .footer p {
+		line-height:2em;
 	}
 
 		.site .footer .contact {
