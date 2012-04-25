@@ -4,6 +4,8 @@ title: "Thomas Boyt | Today, I"
 permalink: todayi.html
 ---
 
+# Today, I...
+
 ### April 24
 
 * Created better error handling for Charcoal's LESS task. Since it's based off the same code that the grunt-contrib project's LESS task is, created a fork & pull request with the new code.
