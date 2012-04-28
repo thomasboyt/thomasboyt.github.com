@@ -14,9 +14,7 @@ Current projects: [Noted](https://github.com/thomasboyt/Noted), [Charcoal](https
 
 * Removed less.js from the repo and instead started requiring my fork of [grunt-contrib](https://github.com/gruntjs/grunt-contrib), a collection of common Grunt tasks.
 * Added compression information to grunt-contrib's minCSS task, similar to how the gruntjs min task works.
-* Updated Ember-Boilerplate's grunt.js:
-  * Added default minCSS task (from grunt-contrib)
-  * Less support in the watch and build tasks is now added/removed based on whether configuration for the Less task exists
+* Updated Ember-Boilerplate's grunt.js: Added default minCSS task (from grunt-contrib); Less support in the watch and build tasks is now added/removed based on whether configuration for the Less task exists
 * Wrote docs & a blog post for Charcoal
 
 ### April 26
