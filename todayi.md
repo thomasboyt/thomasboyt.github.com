@@ -10,6 +10,13 @@ This is a public log of the work I do each day.
 
 Current projects: [Noted](https://github.com/thomasboyt/Noted), [Charcoal](https://github.com/thomasboyt/Charcoal)/[Ember-Boilerplate](https://github.com/thomasboyt/Ember-Boilerplate)
 
+### April 28
+
+* Ember templates in Charcoal are now added into the Ember.TEMPLATES array via a generated templates.js file instead of being embedded in the page.
+* Assets task became more of a general-purpose copy task, may see about adding to grunt-contrib.
+* Updated docs for Charcoal to reflect changes.
+* Working on refactoring the localStorage adapter Noted uses to be more efficient & readable.
+
 ### April 27
 
 * Removed less.js from the repo and instead started requiring my fork of [grunt-contrib](https://github.com/gruntjs/grunt-contrib), a collection of common Grunt tasks.
