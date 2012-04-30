@@ -10,6 +10,11 @@ This is a public log of the work I do each day.
 
 Current projects: [Noted](https://github.com/thomasboyt/Noted), [Charcoal](https://github.com/thomasboyt/Charcoal)/[Ember-Boilerplate](https://github.com/thomasboyt/Ember-Boilerplate)
 
+### April 29
+
+* Refactored localStorage adapter for ember-data to be a little less... weird and slapdash, I guess. Still not quite satisfied with it. Also still haven't fixed the "updating parent associations causes view refresh" issue; may need to start delving into ember-data itself. Should ask around to make sure there's no alternatives first.
+* Fixed less task in grunt-contrib to work for building multiple files into one (edge use case, since 99% of people would just use an @import directive instead of building two files into one, but doesn't hurt).
+
 ### April 28
 
 * Ember templates in Charcoal are now added into the Ember.TEMPLATES array via a generated templates.js file instead of being embedded in the page.
