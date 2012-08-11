@@ -1,3 +1,9 @@
+---
+layout: blank
+title: "App.net rant"
+permalink: appdotnet.html
+---
+
 # Why are we pretending App.net has a chance?
 
 > "Help us create the service **we all wish** existed."
