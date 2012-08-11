@@ -208,6 +208,14 @@ ul.posts {
 			border: none;
 		}
 
+	#post blockquote {
+		margin-left:10px;
+		font-size:14px;
+	}
+	#post blockquote > blockquote {
+		font-size:13px !important;
+	}
+
 	#post a:visited {
 		color: #a0a;
 	}
