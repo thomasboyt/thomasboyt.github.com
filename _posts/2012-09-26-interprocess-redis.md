@@ -3,7 +3,7 @@ layout: post
 title: Interprocess Communication with Redis Pub/Sub
 ---
 
-I was recently working on a small hobbyist project - [an IRC bot that notifies you by SMS when your name is mentioned](http://github.com/thomasboyt/sms-highlight-bot) - when I came across a problem I couldn't quickly solve. This is always the most exciting part of a personal project: an opportunity to learn a new technique, tool, or strategy for solving a problem. 
+I was recently working on a small hobbyist project - [an IRC bot that notifies you by SMS when your name is mentioned](https://github.com/thomasboyt/SMS-Notification-Bot) - when I came across a problem I couldn't quickly solve. This is always the most exciting part of a personal project: an opportunity to learn a new technique, tool, or strategy for solving a problem. 
 
 In this case, the issue was interprocess communication. I wanted to allow users to reply to the users who mentioned them in IRC via SMS. To do this, the small [Flask](http://flask.pocoo.org/) application that handles SMS replies (which are POSTed to it from [Twilio](http://twilio.com)) needed to be able to send a message to the IRC bot (a separate process), saying "user A is replying to user B with this message." The bot should receive this information and then send a private message to user B.
 
