@@ -30,7 +30,7 @@ I am also very bad at writing self-descriptions.
 
 **humbot** ([GitHub](https://github.com/thomasboyt/humbot)) - A chat bot for [Humbug](https://humbughq.com).
 
-**dom-binding.js** ([GitHub](https://github.com/thomasboyt/dom-binding)) - Tiny library for binding data to the DOM. Because sometimes you don't want the (relative) weight of Backbone, but you also don't want to go around calling `$.html` everywhere. Tests written in QUnit.
+**dom-binding.js** ([GitHub](https://github.com/thomasboyt/dom-binding)) - Tiny library for binding data to the DOM. Because sometimes you don't want the (relative) weight of a library like Knockout or Ember, but you also don't want to go around calling `$.html` everywhere. Tests written in QUnit.
 
 **SMS Notification Bot** ([GitHub](https://github.com/thomasboyt/SMS-Notification-Bot)) - Sends you text messages if you get a notification (highlight) in IRC, and even lets you respond back. Runs on Skybot (bot) + Flask (server/Twilio endpoint) + Redis (message passing).
 
