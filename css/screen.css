@@ -24,10 +24,6 @@ body {
     line-height: 2.4em;
 }
 
-/*h1, h2, h3, h4, h5, h6 {
-	font-size: 100%;
-}*/
-
 h1 {
 	margin-bottom: 12px;
 	line-height:1.2em;
@@ -48,6 +44,11 @@ p {
 	margin: 0 0 24px 0;
 	text-align: justify;
 	line-height:1.6em;
+}
+
+iframe {
+  margin: 0 0 24px 0;
+  border:1px #333 solid;
 }
 
 a, a:visited {
@@ -197,13 +198,14 @@ ul.posts {
 		margin-bottom: 24px;
 	}
 
-	#post code {
-		border: 1px solid #ddd;
-		background-color: #eef;
-		font-size: 85%;
-		padding: 0 .2em;
-		
-	}
+  .gist, .gist .file-data {
+    background-color:#fff;
+  }
+
+  #post code {
+    font-size:1.2em;
+		//border: 1px solid #ddd;
+  }
 
 		#post pre code {
 			border: none;
@@ -246,18 +248,3 @@ ul.posts {
 	#related h2 {
 		margin-bottom: 1em;
 	}
-
-#twitter_link_expand {
-	display:none;
-}
-
-#twitter_link_expand {
-	color:#555;
-}
-
-#twitter_link_expand a, #twitter_link_expand a:visited {
-	color:#aaa;
-}
-#twitter_link_expand a:hover {
-	color:black;
-}
