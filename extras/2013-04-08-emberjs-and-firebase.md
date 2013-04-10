@@ -4,7 +4,7 @@ title: "Using Ember.js & Firebase for powerful real-time applications"
 permalink: "firebase-draft.html"
 ---
 
-**TL;DR:** Check out this chat example, featuring authentication, message persistence, and username storage, done in ~ 130 LOC:
+**TL;DR:** Check out this chat example, featuring authentication, message persistence, and username storage, done in ~ 100 LOC (most of which is simply view logic!):
 
 <iframe src="http://emberfbchat.herokuapp.com" seamless="seamless" frameBorder="0" width="610" height="400"></iframe>
 
@@ -13,6 +13,8 @@ This chat was developed using my own [Firebase adapter for Ember Data](https://g
 ## Why Firebase?
 
 [Firebase](https://firebase.com) is one of the most impressive technologies I've had the pleasure of using in the past few months. It's a hierarchial data store-as-a-service built to be the back-end for web and iOS applications. While I usually don't like to hitch a wagon to a back-end I don't control, I was impressed enough by Firebase that I decided to give it a shot.
+
+[ insert more about how Firebase stores data here - go over hierarchial data stores, json representation, lists, etc ]
 
 What I found was that the real power lied not in the back-end itself, but in Firebase's [JavaScript API](https://www.firebase.com/docs/javascript). Rather than simply acting as an interface for REST requests via AJAX, Firebase's Javascript API offers events for when items are added, changed, and removed, powered by a persistent WebSocket connection. 
 
@@ -26,17 +28,21 @@ Let's step through it, file by file.
 
 ### Models & Store
 
-Before diving into the program flow, take a look at the super simple models:
+Before diving into the program flow, take a look at the models themselves:
 
 <script src="https://gist.github.com/thomasboyt/49a5f161d11beae6c430.js?file=models.js"></script>
 
-Note that they extend `DS.Firebase.Model`, not the standard `DS.Model` class.
+Note that the models extend `DS.Firebase.Model`, not the standard `DS.Model` class.
 
 The store is created like any other Ember Data store, with the current API revision and an adapter instance:
 
 <script src="https://gist.github.com/thomasboyt/49a5f161d11beae6c430.js?file=store.js"></script>
 
 The `dbName` property is the subdomain of your Firebase.
+
+Here's what this schema will look like on the backend, once persisted:
+
+![](http://f.cl.ly/items/1C0J2q453x3x1R2o1G2U/Screen%20Shot%202013-04-10%20at%2012.38.53%20PM.png)
 
 ### Router & Controllers
 
@@ -74,7 +80,7 @@ The bottom `InputView` has a bit of code to facilitate picking names and sending
 
 <script src="https://gist.github.com/thomasboyt/49a5f161d11beae6c430.js?file=input_view.js"></script>
 
-And that essentially wraps up the code involved. There's a few other files in [the repo](https://github.com/thomasboyt/ember-firebase-chat/tree/master/app/assets/javascripts), but nothing else with any real content to it.
+And that wraps up the code involved. There's a few other files in [the repo](https://github.com/thomasboyt/ember-firebase-chat/tree/master/app/assets/javascripts), but nothing else with any real content to it.
 
 ## Wrap-Up
 
@@ -85,4 +91,4 @@ This is a really simple example, and only shows off a tiny subset of what Fireba
 * Query for both *relational* resources and *embedded* resources. You can use Firebase as either a hierarchial data store (i.e. a message would be at `/chat_rooms/<chat id>/messages/<message id>`) or as a relational data store (a chat would be at `/chat_rooms/<chat id>/` and its messages would be under `/messages/<message_id`, with a `messages` attribute containing only the IDs of the messages in the chat).
 * Use Firebase as a *key-value* store instead of simply pushing messages in with auto-generated IDs by specifiying the `id` property of a model when creating it.
 
-...and more.
+[ insert conclusion here ]

@@ -28,6 +28,8 @@ I am also very bad at writing self-descriptions.
 
 ## Other Stuff I've Built
 
+**Ember Firebase Adapter** ([GitHub](https://github.com/thomasboyt/ember-firebase-adapter)) - An adapter for integrating [Firebase](https://firebase.com) with [Ember Data](https://github.com/emberjs/data).
+
 **humbot** ([GitHub](https://github.com/thomasboyt/humbot)) - A chat bot for [Humbug](https://humbughq.com).
 
 **dom-binding.js** ([GitHub](https://github.com/thomasboyt/dom-binding)) - Tiny library for binding data to the DOM. Because sometimes you don't want the (relative) weight of a library like Knockout or Ember, but you also don't want to go around calling `$.html` everywhere. Tests written in QUnit.
