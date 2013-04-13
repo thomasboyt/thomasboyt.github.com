@@ -1,22 +1,19 @@
 ---
 layout: post
 title: "Using Ember.js & Firebase for powerful real-time applications"
-permalink: "firebase-draft.html"
 ---
 
 **TL;DR:** Check out this chat example, featuring authentication, message persistence, and username storage, done in ~ 100 LOC (most of which is simply view logic!):
 
 <iframe src="http://emberfbchat.herokuapp.com" seamless="seamless" frameBorder="0" width="610" height="400"></iframe>
 
-This chat was developed using my own [Firebase adapter for Ember Data](https://github.com/thomasboyt/ember-firebase-adapter). The source is available [on GitHub](https://github.com/thomasboyt/ember-firebase-chat) (and if you're not familar with the Rails app structure, the Ember app itself lives [here](https://github.com/thomasboyt/ember-firebase-chat/tree/master/app/assets/javascripts)).
+This chat application was developed using my own [Firebase adapter for Ember Data](https://github.com/thomasboyt/ember-firebase-adapter). The source is available [on GitHub](https://github.com/thomasboyt/ember-firebase-chat) (and if you're not familar with the Rails app structure, the Ember app itself lives [here](https://github.com/thomasboyt/ember-firebase-chat/tree/master/app/assets/javascripts)).
 
 ## Why Firebase?
 
 [Firebase](https://firebase.com) is one of the most impressive technologies I've had the pleasure of using in the past few months. It's a hierarchial data store-as-a-service built to be the back-end for web and iOS applications. While I usually don't like to hitch a wagon to a back-end I don't control, I was impressed enough by Firebase that I decided to give it a shot.
 
-[ insert more about how Firebase stores data here - go over hierarchial data stores, json representation, lists, etc ]
-
-What I found was that the real power lied not in the back-end itself, but in Firebase's [JavaScript API](https://www.firebase.com/docs/javascript). Rather than simply acting as an interface for REST requests via AJAX, Firebase's Javascript API offers events for when items are added, changed, and removed, powered by a persistent WebSocket connection. 
+What I found was that the real power lied not in the storage back-end itself, but in Firebase's [JavaScript API](https://www.firebase.com/docs/javascript). Rather than simply acting as an interface for REST requests via AJAX, Firebase's Javascript API offers events for when items are added, changed, and removed, powered by a persistent WebSocket connection. 
 
 Immediately, I saw the potential that Firebase had when used as a back-end for Ember. By adapting Firebase for use with Ember's data persistence library, Ember Data, I could create models and queries that could update in real time, and require no extra boilerplate to handle add and remove events.
 
@@ -84,11 +81,11 @@ And that wraps up the code involved. There's a few other files in [the repo](htt
 
 ## Wrap-Up
 
-This is a really simple example, and only shows off a tiny subset of what Firebase can do. Using [the Ember Firebase adapter](https://github.com/thomasboyt/ember-firebase-adapter), you can also:
+This is a really simple example, and only shows off a tiny subset of what Firebase and Ember Data can do.  Firebase doesn't stop at the cliched chat example - it can handle the complexity real-world usage has.
 
-* Create models with live-updating properties. Imagine a collaborative to-do list where an item is updated automatically as you and your collaborators change it.
-* Define *live relationships* on models. You could extend this application to include multiple *chat rooms*, each with their own *messages*. By defining a `hasMany('Message')<->belongsTo('ChatRoom')` relationship, you could simply bind your view's content to a chat room's `messages` resource.
-* Query for both *relational* resources and *embedded* resources. You can use Firebase as either a hierarchial data store (i.e. a message would be at `/chat_rooms/<chat id>/messages/<message id>`) or as a relational data store (a chat would be at `/chat_rooms/<chat id>/` and its messages would be under `/messages/<message_id`, with a `messages` attribute containing only the IDs of the messages in the chat).
-* Use Firebase as a *key-value* store instead of simply pushing messages in with auto-generated IDs by specifiying the `id` property of a model when creating it.
+The adapter supports both the features you'd expect from a real-time backend as well as the normal features of a REST backend. You can have models that update live as their Firebase object changes, powerful relationships, and even live-updating relationships, all with zero boilerplate for handling changes. 
 
-[ insert conclusion here ]
+## Resources
+
+* [Chat Source](https://github.com/thomasboyt/ember-firebase-chat)
+* [Adapter Documentation](https://github.com/thomasboyt/ember-firebase-adapter/wiki)
