@@ -89,3 +89,5 @@ The adapter supports both the features you'd expect from a real-time backend as 
 
 * [Chat Source](https://github.com/thomasboyt/ember-firebase-chat)
 * [Adapter Documentation](https://github.com/thomasboyt/ember-firebase-adapter/wiki)
+
+*Discuss this post on [Hacker News](https://news.ycombinator.com/item?id=5543959).*
