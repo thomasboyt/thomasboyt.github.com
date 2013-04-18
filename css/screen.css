@@ -41,9 +41,9 @@ h3 {
 }
 
 p {
-	margin: 0 0 24px 0;
+	margin: 0 0 16px 0;
 	text-align: justify;
-	line-height:1.6em;
+	line-height:1.8em;
 }
 
 iframe {
@@ -95,7 +95,7 @@ ul.posts {
 
 .site {
 	font-size: 1.0em;
-	width: 610px;
+	width: 640px;
 	margin: 3em auto 2em auto;
 	font-size:1.6em;
 	color:#3c3c3c;
@@ -204,6 +204,7 @@ ul.posts {
 
   #post code {
     font-size:1.2em;
+    text-align:left;
 		//border: 1px solid #ddd;
   }
 

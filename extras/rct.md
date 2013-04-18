@@ -1,5 +1,5 @@
 ---
-layout: blank
+layout: post
 title: "Installing RCT on Mac"
 permalink: rctmac.html
 ---
