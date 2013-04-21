@@ -83,7 +83,6 @@ ul.posts {
 
 	ul.posts span {
 		color: #aaa;
-		/*font-family: Monaco, "Courier New", monospace;*/
 		font-size: 80%;
 	}
 
@@ -185,7 +184,7 @@ ul.posts {
 	/* standard */
 
 	#post pre {
-		font-family: Monaco, Consolas, "Courier New", monospace;
+		font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 		font-size:85%;
 		border: 1px solid #ddd;
 		background-color: #eef;
