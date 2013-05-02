@@ -12,7 +12,7 @@
 }
 
 html {
-	overflow: -moz-scrollbars-vertical; 
+	overflow: -moz-scrollbars-vertical;
 	overflow-y: scroll;
 }
 
@@ -21,7 +21,7 @@ body {
 	font-family: helvetica neue, arial, clean, sans-serif;
 	text-align: left;
 	font-size: 62.5%;
-    line-height: 2.4em;
+  line-height: 2.4em;
 }
 
 h1 {
@@ -44,6 +44,12 @@ p {
 	margin: 0 0 16px 0;
 	text-align: justify;
 	line-height:1.8em;
+}
+
+@media (max-width: 600px) {
+  p {
+    text-align: left;
+  }
 }
 
 iframe {
@@ -94,10 +100,11 @@ ul.posts {
 
 .site {
 	font-size: 1.0em;
-	width: 640px;
-	margin: 3em auto 2em auto;
+	max-width: 640px;
+	margin: 1em auto 2em auto;
 	font-size:1.6em;
 	color:#3c3c3c;
+  padding:0 10px;
 }
 
 .title {
@@ -106,6 +113,17 @@ ul.posts {
 	margin-bottom: 1em;
 	padding-bottom: 1em;
 	border-bottom: 4px solid #EEE;
+  min-height:1em;
+}
+
+@media (min-width: 700px) {
+  .site .title .name {
+    float:left;
+  }
+
+  .site .title .links {
+    float:right;
+  }
 }
 
 	.site .title a {
@@ -120,8 +138,12 @@ ul.posts {
 	.site .title a.extra {
 		color: #aaa;
 		text-decoration: none;
-		margin-left: 1em;
+		margin-right: 1em;
 	}
+
+  .site .title a.extra:last-child {
+    margin-right:0;
+  }
 
 	.site .title a.extra:hover {
 		color: black;
@@ -156,7 +178,7 @@ ul.posts {
 		.site .footer .about-jekyll {
 			float:right;
 		}
-		
+
 			.site .footer .about-jekyll a {
 				color: #8085C1;
 			}
@@ -234,7 +256,7 @@ ul.posts {
 	#post pre.terminal code {
 		background-color: #333;
 	}
-	
+
 	#post img {
 		display:block;
 		margin-left:auto;
