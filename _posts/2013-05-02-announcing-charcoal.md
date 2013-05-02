@@ -55,3 +55,5 @@ grunt server
 You should see a working example application. Then, just follow the development guide (added to your project under `charcoal/readme.md`) to learn how to create applications with Charcoal.
 
 Charcoal is on [GitHub](https://github.com/thomasboyt/charcoal) if you'd like to add changes or report bugs. I'm excited to see what you build with it!
+
+*Discuss this post on [Hacker News](https://news.ycombinator.com/item?id=5646419).*
