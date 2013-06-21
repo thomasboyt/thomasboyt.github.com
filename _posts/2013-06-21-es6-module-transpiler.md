@@ -8,9 +8,13 @@ permalink: "es6-module-draft.html"
 
 [Modules](http://wiki.ecmascript.org/doku.php?id=harmony:modules) are one of the most interesting and useful additions coming in ES6, the next version of JavaScript. A lack of universal module support has long been a pain point for JavaScript. While it's been understood for a long time that simply concatenating files together isn't going to cut it when you start developing complicated applications and dependency trees, the competing module specifications - AMD and CommonJS - are both difficult to use and difficult to make interop with each other.
 
-ES6 modules will create a universal way of declaring modules in any context, whether running in the browser or on the server. But support for it is still a long ways off - the spec is still somewhat in flux,and it will be a while before we see proper support for it in either SpiderMonkey (Mozilla's JS engine) or V8 (Chrome and Node's JS engine).
+ES6 modules will create a universal way of declaring modules in any context, whether running in the browser or on the server. But support for it is still a long ways off - the spec is still somewhat in flux, and it will be a while before we see proper support for it in either SpiderMonkey (Mozilla's JS engine) or V8 (Chrome and Node's JS engine).
 
-The [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler) lets you use the ES6 module syntax today. It outputs both AMD and CommonJS modules, meaning the output can be used in any JavaScript environment with minimal effort. However, rather than simply use the command-line interface for the transpiler, it's even easier to use [grunt-es6-module-transpiler](https://github.com/joefiorini/grunt-es6-module-transpiler) plugin.
+The [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler) lets you use the ES6 module syntax today. It outputs both AMD and CommonJS modules, meaning the output can be used in any JavaScript environment with minimal effort. However, rather than simply use the command-line interface for the transpiler, it's even easier to use the [grunt-es6-module-transpiler](https://github.com/joefiorini/grunt-es6-module-transpiler) plugin.
+
+Before continuing, I'm assuming you have at least basic knowledge of Grunt and how it works. If not, it's a fantastic time to get educated - it's quickly becoming the standard for front-end build processes.
+
+And one more sidebar: as of the time that this post was written, the grunt-es6-module-transpiler is on a slightly outdated version of the es6-module transpiler. The following assumes that you're using [this fork](https://github.com/thomasboyt/grunt-es6-module-transpiler) that bumps the version to the current Git master.
 
 ## An example project
 
@@ -84,4 +88,4 @@ You can see the final Gruntfile used for this [here](https://github.com/thomasbo
 
 ## Wrapping up
 
-Phew, that seems like a lot, doesn't it? But really, once you've got it configured once, you'll know how to do it again in the future. And the benefits are huge: besides being able to use future ES6 syntax, you now have builds of your library that work no matter what module system you or your dependents are using.
+Phew, that seems like a lot, doesn't it? But really, once you've got it configured once, you'll know how to do it again in the future. And the benefits are huge: besides being able to use future ES6 syntax, you now have builds of your library that work no matter what module system you or your dependents are using. And because of Grunt's near-ubiquity, it's an easy build step to add to your library or application.
