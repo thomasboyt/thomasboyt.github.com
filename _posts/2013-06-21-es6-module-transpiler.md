@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Using Grunt & the ES6 Module Transpiler"
-permalink: "es6-module-draft.html"
 ---
 
 *(or tomorrow's syntax, today!)*
