@@ -13,8 +13,6 @@ The [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler) let
 
 Before continuing, I'm assuming you have at least basic knowledge of Grunt and how it works. If not, it's a fantastic time to get educated - it's quickly becoming the standard for front-end build processes.
 
-And one more sidebar: as of the time that this post was written, the grunt-es6-module-transpiler is on a slightly outdated version of the es6-module transpiler. The following assumes that you're using [this fork](https://github.com/thomasboyt/grunt-es6-module-transpiler) that bumps the version to the current Git master.
-
 ## An example project
 
 To demonstrate the transpiler, let's write a [very silly library](https://github.com/thomasboyt/es6-module-example) that contains two very silly methods: `shout(string)`, which returns the upper case string, and `ssshh(string)`, which returns the lower case string.
