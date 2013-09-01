@@ -206,8 +206,8 @@ ul.posts {
 	/* standard */
 
 	#post pre {
-		font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-		font-size:85%;
+		font-family: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+		font-size:14px;
 		border: 1px solid #ddd;
 		background-color: #eef;
 		padding: 0 .4em;
