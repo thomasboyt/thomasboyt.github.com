@@ -4,7 +4,7 @@ title: "Thomas Boyt"
 permalink: index.html
 ---
 
-I'm a software engineer at [Tutorspree](http://tutorspree.com), [Hacker School](http://hackerschool.com) alumnus, and the creator of open source projects that include [Charcoal](https://github.com/thomasboyt/charcoal), [Ember Firebase Adapter](https://github.com/thomasboyt/ember-firebase-adapter), and [Noted](http://noted.herokuapp.com/).
+I'm a front-end engineer at [Venmo](https://venmo.com), [Hacker School](http://hackerschool.com) alumnus, and a contributor to open source projects such as [Ember.js](http://emberjs.com), [Ember App Kit](https://github.com/iamstef/ember-app-kit), and [es6-module-transpiler](https://github.com/square/es6-module-transpiler).
 
 You can find me on GitHub at [thomasboyt](https://github.com/thomasboyt) and on Twitter at [@thomasABoyt](http://twitter.com/thomasABoyt).
 
