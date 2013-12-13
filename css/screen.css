@@ -215,7 +215,7 @@ ul.posts span {
 #post ul,
 #post ol {
   margin-left: 1.35em;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .gist, .gist .file-data, .highlight {
