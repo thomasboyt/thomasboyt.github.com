@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Using React components as Backbone Views"
-permalink: react.html
+permalink: "react-draft.html"
 ---
 
-At [Venmo](https://venmo.com/), we've begun rewriting and redesigning our front-end into clean, idiomatic Backbone code. Backbone is an unopinionated framework that provides structure to your MVC layer. However, its view layer is purposefully lacking, providing only a few basic lifecycle hooks. Unlike Ember components or Angular directives, it does not hook your data up to your views for you, and does little to enforce separation between your layers.
+At [Venmo](https://venmo.com/), we've begun rewriting and redesigning our front-end into clean, idiomatic Backbone code. Backbone is an unopinionated framework that provides structure to your code. However, its view layer is purposefully lacking, providing only a few basic lifecycle hooks. Unlike Ember components or Angular directives, it does not hook your data up to your views for you, and does little to enforce separation between your layers.
 
 While we've gotten surprisingly far using only vanilla Backbone views, we've begun exploring more advanced options for architecting our UI. My goal was to find something that could interface with Backbone views that gave me the data binding and scoping that I was used to from views in larger frameworks. Thankfully, my friend [Scott](https://scott.mn/) pointed me at React, and after a few hours of wrestling with it, I came away very impressed.
 
@@ -44,7 +44,7 @@ Integrating JSX with your workflow is easy, thanks to the plethora of tools for 
 
 Instead of teaching the basics of React in this post, I'll pass that responsibility to the [excellent React tutorial](http://facebook.github.io/react/docs/tutorial.html). It's a bit long, but give it a skim before continuing!
 
-## Using a component from a Backbone view
+## Rendering a component from a Backbone view
 
 Let's create a very basic component: a link that fires an event when clicked. We'd like to render this component as part of a Backbone view, rather than use it on its own. The component is easy enough to create:
 
@@ -77,9 +77,11 @@ var MyView = Backbone.View.extend({
 new MyView().render();
 {% endhighlight %}
 
-[You can see the full example in a JSFiddle here](http://jsfiddle.net/4vF2r/2/).
+Here's our completed new component:
 
-## Getting data from the component
+<iframe width="100%" height="250" src="http://jsfiddle.net/4vF2r/2/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+## Component -> Backbone communication
 
 Of course, to really take advantage of React components, we'll need to be communicate changes from React to Backbone. For a very arbitrary example, let's say that we want to display a bit of text if the link in our component has been clicked. Not only that, but we want the bit of text to be *outside* the component's DOM element.
 
@@ -127,16 +129,98 @@ var MyWidget = React.createClass({
 });
 {% endhighlight %}
 
-[Here's the updated JSFiddle.](http://jsfiddle.net/MgUXK/) Again, this is a very contrived example. But it shouldn't be hard to envision a more practical.
+Here's our full, updated example:
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/MgUXK/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Again, this is a very contrived example, but it shouldn't be hard to envision a more practical use case.
 
 For example, at Venmo, we've remade our "Connect with Facebook" button with React. The actual Facebook API calls happen within the component, but the views in which the component are used bind different handlers to the component's events. These events (such as "authenticated with Facebook" or "logged out of Facebook") are essentially the component's "public API." React can also pass arguments with events, so that when a user connects with Facebook, the Backbone view gets the user's Facebook ID and attaches it to the user model.
+
+## Backbone -> Component communication
+
+Now that we know how to get communication from a component, the next step is to be able to update the component's state from a Backbone model - as a concrete example, we'll make a view that reacts to a changed field on a model. This requires a bit of boilerplate (though no more than your usual manually-connected Backbone view), but is quite easy in practice.
+
+First, we create a tiny model class:
+
+{% highlight js %}
+var ExampleModel = Backbone.Model.extend({
+  defaults: {
+    name: 'Backbone.View'
+  }
+});
+{% endhighlight %}
+
+And a simple React component that displays the `name` field:
+
+{% highlight js %}
+var DisplayView = React.createClass({
+  render: function() {
+    return (
+      <p>
+        {this.props.model.get('name')}
+      </p>
+    );
+  }
+});
+{% endhighlight %}
+
+However, this component on its own can't react to the model's field being changed. Instead, we can add a listener for the model's `change` event that tells the component to re-render:
+
+{% highlight js %}
+var DisplayView = React.createClass({
+  componentDidMount: function() {
+    this.props.model.on('change', function() {
+      this.forceUpdate();
+    }.bind(this));
+  },
+
+  render: function() {
+    // ...
+  }
+});
+{% endhighlight %}
+
+Then, we add another component that will actually change the `name` field:
+
+{% highlight js %}
+var ToggleView = React.createClass({
+  handleClick: function() {
+    this.props.model.set('name', 'React');
+  },
+  render: function() {
+    return (
+      <button onClick={this.handleClick}>
+        model.set('name', 'React');
+      </button>
+    );
+  }
+});
+{% endhighlight %}
+
+Finally, we create a model and render both components using JSX:
+
+{% highlight js %}
+var model = new ExampleModel();
+
+React.renderComponent((
+  <div>
+    <DisplayView model={model} />
+    <ToggleView model={model} />
+  </div>
+), document.body);
+{% endhighlight %}
+
+And the completed example:
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/c76Un/3/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Conclusion
 
 Backbone + React is a fantastic pairing. There's several other blog posts that discuss it:
 
 * [Joel Burget discusses Khan Academy's move to React](http://joelburget.com/backbone-to-react/)
-* [Clay Allsopp writes](https://usepropeller.com/blog/posts/from-backbone-to-react/) about Propeller's move to React, including a [very cool React Mixin for binding to Backbone Model/Collection changes](https://github.com/usepropeller/react.backbone)
+* [Clay Allsopp writes](https://usepropeller.com/blog/posts/from-backbone-to-react/) about Propeller's move to React, including a [very cool React Mixin for binding to Backbone Model/Collection changes](https://github.com/usepropeller/react.backbone) like we did in the last example
 * Paul Seiffert (author of require-jsx) has another post about [replacing Backbone views with React](http://blog.mayflower.de/3937-Backbone-React.html)
 
 React also has [an example Backbone+React TodoMVC app](https://github.com/facebook/react/tree/master/examples/todomvc-backbone) that's worth checking out.
