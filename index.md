@@ -4,7 +4,7 @@ title: "Thomas Boyt"
 permalink: index.html
 ---
 
-I'm a front-end engineer at [Venmo](https://venmo.com), [Hacker School](http://hackerschool.com) alumnus, and a contributor to open source projects such as [Ember.js](http://emberjs.com), [Ember App Kit](https://github.com/stefanpenner/ember-app-kit), and [es6-module-transpiler](https://github.com/square/es6-module-transpiler).
+I'm a software engineer, JavaScript afficianado, [Hacker School](http://hackerschool.com) alumnus, and a contributor to open source projects such as [Ember.js](http://emberjs.com), [Ember App Kit](https://github.com/stefanpenner/ember-app-kit), and [es6-module-transpiler](https://github.com/square/es6-module-transpiler).
 
 You can find me on GitHub at [thomasboyt](https://github.com/thomasboyt) and on Twitter at [@thomasABoyt](http://twitter.com/thomasABoyt).
 
