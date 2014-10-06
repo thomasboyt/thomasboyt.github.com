@@ -3,9 +3,7 @@ layout: post
 title: "Chrome extensions: Handling messaging from injected scripts"
 ---
 
-I spent my Saturday night, as I do many Saturday nights, screaming on Twitter about things being broken.
-
-I've been working on a Chrome extension, [coquette-inspect](https://github.com/thomasboyt/coquette-inspect), which adds a debugger for [coquette.js](http://coquette.maryrosecook.com/) games to the Chrome Dev Tools. Chrome has had dev tools extension support for a couple years now, and I've used several awesome extensions in the past, so I figured it'd be a well-documented field.
+I've been working on a Chrome extension, [coquette-inspect](https://github.com/thomasboyt/coquette-inspect), which adds a debugger for [coquette.js](http://coquette.maryrosecook.com/) games to the Chrome Dev Tools. Chrome has had dev tools extension support for a couple years now, and I've used several awesome extensions in the past (including [Ember Inspector](https://github.com/emberjs/ember-inspector) and [React Dev Tools](https://github.com/facebook/react-devtools)), so I figured it'd be a well-documented field.
 
 So, you can imagine my surprise when I found that a really common use case was not only poorly-documented in the Dev Tools extension docs, but not documented *anywhere*, as far as I can tell.
 
